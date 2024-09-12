@@ -107,7 +107,10 @@ src="https://www.facebook.com/tr?id=1190828882194953&ev=PageView&noscript=1"
                         // You can process form data submission here (e.g., send it to your server)
                         
                         console.log("Form submitted");
-                    
+
+                     var hash = {};
+                      hash["key"] = "submitted";
+                      XA.component.search.query.updateHash(hash);
                         // Optionally, reset the form
                         document.getElementById('my_form').reset();
                     }
