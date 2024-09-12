@@ -84,6 +84,16 @@ src="https://www.facebook.com/tr?id=1190828882194953&ev=PageView&noscript=1"
 
                   
                   <script>
+
+                    document.getElementById('btnSubmit').addEventListener('click', function() {
+                        // Track a Facebook Pixel event when the button is clicked
+                        fbq('track', 'Lead', {
+                          button_clicked: 'Submit button clicked'
+                        });
+                    
+                        // Optionally, do other things like form submission here
+                        console.log('Button clicked, Lead event tracked');
+                      });
                    function handleSubmit(event) {
                         event.preventDefault(); // Prevents the default form submission
                         
